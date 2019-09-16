@@ -1,3 +1,4 @@
+//initializing variables
 var q1 = false;
 var q2 = false;
 var q3 = false;
@@ -6,6 +7,12 @@ var q5 = false;
 var delay;
 var count = 60;
 
+//plays music once user interacts
+$(document).on("click", function(){
+    $("#bgm")[0].play();
+});
+
+//checks user's responses
 var checkResponse = function () {
     if ($("#q1b:checked").length > 0) {
         console.log("correct");
@@ -112,27 +119,27 @@ function decrement() {
     }
 }
 
-function scorechecker(){
+function scorechecker() {
     var score = 0;
-    if(q1 === true){
+    if (q1 === true) {
         score++;
     }
-    if(q2 === true){
+    if (q2 === true) {
         score++;
     }
-    if(q3 === true){
+    if (q3 === true) {
         score++;
     }
-    if(q4 === true){
+    if (q4 === true) {
         score++;
     }
-    if(q5 === true){
+    if (q5 === true) {
         score++;
     }
     $("#score").text("You got " + score + "/5 Questions correct!")
 }
 
-$("#submit").on("click", function(){
+$("#submit").on("click", function () {
     count = 0;
     checkResponse();
     scorechecker();
