@@ -132,4 +132,10 @@ function scorechecker(){
     $("#score").text("You got " + score + "/5 Questions correct!")
 }
 
+$("#submit").on("click", function(){
+    count = 0;
+    checkResponse();
+    scorechecker();
+});
+
 run()

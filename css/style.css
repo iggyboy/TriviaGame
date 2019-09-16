@@ -41,3 +41,7 @@ form {
     text-align:center;
     margin: 0 auto;
 }
+
+#submit {
+    margin-left : 48%;
+}
